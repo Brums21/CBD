@@ -1,0 +1,40 @@
+Search for ('Enter' for quit): ana
+Ana - 1010.0 
+Anaísa - 10.0 
+Anaís - 7.0 
+Anabela - 6.0 
+Anamar - 5.0 
+Anastasia - 5.0 
+Anaya - 5.0 
+Anabel - 3.0 
+Anael - 2.0 
+Anaelle - 2.0 
+Anair - 2.0 
+Anais - 2.0 
+Anaisa - 2.0 
+Ananda - 2.0 
+Anastacia - 2.0 
+Anastácia - 2.0 
+Anabia - 1.0 
+Anagila - 1.0 
+Anam - 1.0 
+Anami - 1.0 
+Anantveer - 1.0 
+Anas - 1.0 
+Anass - 1.0 
+Anastasiya - 1.0 
+Anastassia - 1.0 
+Anastácio - 1.0 
+Anayah - 1.0 
+Anaïs - 1.0 
+Search for ('Enter' for quit): raqu
+Raquel - 129.0 
+Search for ('Enter' for quit): con
+Constança - 459.0 
+Concha - 9.0 
+Conceição - 1.0 
+Constantino - 1.0 
+Constanza - 1.0 
+Constância - 1.0 
+Constânça - 1.0 
+Search for ('Enter' for quit): 

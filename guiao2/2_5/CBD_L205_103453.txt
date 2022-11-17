@@ -1,0 +1,72 @@
+Estrutura do dataset, usando um exemplo:
+{
+    _id: 7,
+    name: 'Salena Olmos',
+    scores: [
+      { score: 90.37826509157176, type: 'exam' },
+      { score: 42.48780666956811, type: 'quiz' },
+      { score: 96.52986171633331, type: 'homework' }
+    ]
+  }
+}
+
+Tem array of embedded documents no field "scores", com 200 documentos na sua totalidade.
+
+Queries usando o operador find:
+
+Todos as queries estao escritas em mongodb shell
+
+
+Find scripts:
+
+1. Contar a totalidade de documentos do dataset:
+
+db.students.find().count()
+
+2. Listar cidades com populacao maior que 100000:
+
+db.cities.find({pop: {$gt: 100000}})
+
+3. Listar localidades com latitude menor que -74:
+
+db.cities.find({"loc.0": {$lt: -74}})
+
+4. Listar cidades com populacao maior que 30000 e no estado 'NH':
+
+db.cities.find({pop: {$gt: 30000}, state: 'NH'})
+
+5. Listar cidades com populacao igual a 0, 4421 ou 1065 no estado 'VT':
+
+db.cities.find({pop: {$in:[0, 4421, 1065]}, state: 'VT'})
+
+6. Listar cidades com populacao menor que 200 ou maior que 10000 fora do estado 'VT':
+
+db.cities.find({$or :[{ pop: {$lt: 200}}, {pop: {$gt: 1000}}], state: 'VT'})
+
+
+
+Queries usando aggregate:
+
+1. Contar quantos cidades existem em cada state:
+
+db.cities.aggregate([{$group: {"_id": "$state", totalCidades:{$count : {}}}}])
+
+2. Indicar quais os estados que tem uma media populacional inferior a 5000:
+
+db.cities.aggregate([{$group: {"_id": "$state", "avgPop" : {$avg: "$pop"}}}, {$match: {avgPop : {$lt:5000}}}])
+
+3. Ver a cidade com maior populacao
+
+db.cities.aggregate([{ $group: { "_id": "$city", max: { $max: "$pop" } } }, { $sort: { max: -1 } }, {$limit : 1}])
+
+4. Ver o estado com maior somatorio de populacao
+
+db.cities.aggregate([{ $group: { "_id": "$state", soma: { $sum: "$pop" } } }, { $sort: { max: -1 } }, {$limit : 1}])
+
+5. Contar a populacao de cada estado
+
+db.cities.aggregate([{ $group: { "_id": "$state", soma: { $sum: "$pop" } } }])
+
+6. Contar a media populacional de cada estado
+
+db.cities.aggregate([{ $group: { "_id": "$state", avg: { $avg: "$pop" } } }])

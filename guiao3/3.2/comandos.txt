@@ -1,0 +1,7 @@
+CREATE KEYSPACE videoshare WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
+cqlsh:videoshare> create table if not exists users(username text PRIMARY KEY, name text, email text, time_regist timestamp);
+cqlsh:videoshare> create table if not exists videos(author text, name text, desciption text, tags list<text>, uploadts timestamp);
+InvalidRequest: Error from server: code=2200 [Invalid query] message="No PRIMARY KEY specifed for table 'videos' (exactly one required)"
+cqlsh:videoshare> create table if not exists videos(author text, name text, desciption text, tags list<text>, uploadts timestamp, primary key(author, name));
+cqlsh:videoshare> create table if not exists comments(comment text, video_name text, author text, created timestamp, primary key(video_name, author));
+cqlsh:videoshare> 

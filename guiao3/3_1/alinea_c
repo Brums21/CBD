@@ -1,0 +1,66 @@
+//Acabar isto
+cqlsh> CREATE KEYSPACE myKeySpace WITH replication = {'class' : 'SimpleStrategy', 'replication_factor' : 3} ;
+
+Warnings :
+Your replication factor 3 for keyspace mykeyspace is higher than the number of nodes 1
+
+cqlsh> DROP KEYSPACE  myKeySpace;
+cqlsh> CREATE KEYSPACE myKeySpace WITH replication = {'class' : 'SimpleStrategy', 'replication_factor' : 1} ;
+cqlsh> DESCRIBE myKeySpace
+
+CREATE KEYSPACE mykeyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
+
+cqlsh> DESCRIBE myKeySpace
+
+CREATE KEYSPACE mykeyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': '1'}  AND durable_writes = true;
+cqlsh> 
+cqlsh> CREATE TABLE IF NOT EXISTS mykeyspace.tabela1(
+   ... userid text PRIMARY KEY,
+   ... itemcount int, 
+   ... last_update timestamp);
+
+cqlsh> select * from mykeyspace.tabela1;
+
+ userid | itemcount | last_update
+--------+-----------+-------------
+
+(0 rows)
+cqlsh> insert into mykeyspace.tabela1(userid, itemcount, last_update) VALUES
+   ... ('1234', 2, toTimeStamp(now()));
+cqlsh> select * from mykeyspace.tabela1;
+
+ userid | itemcount | last_update
+--------+-----------+---------------------------------
+   1234 |         2 | 2022-11-03 12:26:06.044000+0000
+
+(1 rows)
+cqlsh> 
+cqlsh> insert into mykeyspace.tabela1(userid, last_update) VALUES ('1235', 5);
+cqlsh> select * from mykeyspace.tabela1;
+
+ userid | itemcount | last_update
+--------+-----------+---------------------------------
+   1234 |         2 | 2022-11-03 12:26:06.044000+0000
+   1235 |      null | 1970-01-01 00:00:00.005000+0000
+
+(2 rows) 
+cqlsh> update tabela1 set itemcount = 3,
+   ... where userid = '1235'
+   ... ;
+SyntaxException: line 2:0 no viable alternative at input 'where' (... set itemcount = 3,[where]...)
+cqlsh> update tabela1 set itemcount = 3
+   ... where userid = '1235'
+   ... ;
+InvalidRequest: Error from server: code=2200 [Invalid query] message="No keyspace has been specified. USE a keyspace, or explicitly specify keyspace.tablename"
+cqlsh> use mykeyspace
+   ... ;
+cqlsh:mykeyspace> update tabela1 set itemcount = 3 where userid = '1235' ;
+cqlsh:mykeyspace> select * from tabela1
+              ... ;
+
+ userid | itemcount | last_update
+--------+-----------+---------------------------------
+   1234 |         2 | 2022-11-03 12:26:06.044000+0000
+   1235 |         3 | 1970-01-01 00:00:00.005000+0000
+
+(2 rows)

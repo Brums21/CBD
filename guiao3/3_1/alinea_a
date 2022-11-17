@@ -1,0 +1,16 @@
+Instalacao da cassandra no docker:
+
+docker pull cassandra:latest
+
+Run cassandra:
+
+docker run --name cass_cluster cassandra:latest
+
+Usar cqlsh:
+
+docker exec -it cass_cluster sh
+
+#cqlsh
+
+
+

@@ -1,0 +1,4 @@
+necessario criar 3 relacoes chave - valor :
+            - 1 para todos os utilizadores -> users ("users" -> lista de users)
+            - x para todas as relacoes utilizador-outros utilizadores subscritos (utilizador -> following)
+            - 1 para todas as stored messages -> user - mensagem ("messages" -> mapa (utilizador -> mensagem))

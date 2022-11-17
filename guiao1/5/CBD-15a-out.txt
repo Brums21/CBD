@@ -1,0 +1,105 @@
+Bem vindo/(a) ao sistema de mensagens!
+1 - Registar novo utilizador
+2 - Seguir alguem
+3 - Enviar mensagem
+4 - Ler mensagens
+1
+Indique o novo utilizador: 
+Bruna
+Utilizador gravado com sucesso.
+
+1 - Registar novo utilizador
+2 - Seguir alguem
+3 - Enviar mensagem
+4 - Ler mensagens
+2
+Indique quem e:
+Matilde
+Indique quem pretende seguir:
+Bruna
+
+1 - Registar novo utilizador
+2 - Seguir alguem
+3 - Enviar mensagem
+4 - Ler mensagens
+3
+Indique quem e:
+Matilde
+Indique a mensagem que pretende enviar: 
+Hoje esta muito frio
+
+1 - Registar novo utilizador
+2 - Seguir alguem
+3 - Enviar mensagem
+4 - Ler mensagens
+3
+Indique quem e:
+Matilde
+Indique a mensagem que pretende enviar: 
+A ficar mais quentinho
+
+1 - Registar novo utilizador
+2 - Seguir alguem
+3 - Enviar mensagem
+4 - Ler mensagens
+3
+Indique quem e:
+Diogo
+Indique a mensagem que pretende enviar: 
+Finalemente registrado na plataforma
+
+1 - Registar novo utilizador
+2 - Seguir alguem
+3 - Enviar mensagem
+4 - Ler mensagens
+1
+Indique o novo utilizador: 
+Fernanda
+Utilizador gravado com sucesso.
+
+1 - Registar novo utilizador
+2 - Seguir alguem
+3 - Enviar mensagem
+4 - Ler mensagens
+3
+Indique quem e:
+Fernanda
+Indique a mensagem que pretende enviar: 
+Sem seguir ninguem
+
+1 - Registar novo utilizador
+2 - Seguir alguem
+3 - Enviar mensagem
+4 - Ler mensagens
+2
+Indique quem e:
+Bruna
+Indique quem pretende seguir:
+Matilde
+
+1 - Registar novo utilizador
+2 - Seguir alguem
+3 - Enviar mensagem
+4 - Ler mensagens
+2
+Indique quem e:
+Bruna
+Indique quem pretende seguir:
+Diogo
+
+1 - Registar novo utilizador
+2 - Seguir alguem
+3 - Enviar mensagem
+4 - Ler mensagens
+4
+Indique quem e:
+Bruna
+Catarina: Esta calor
+Matilde: A ficar mais quentinho
+Diogo: Finalemente registrado na plataforma
+Bruna: null
+
+1 - Registar novo utilizador
+2 - Seguir alguem
+3 - Enviar mensagem
+4 - Ler mensagens

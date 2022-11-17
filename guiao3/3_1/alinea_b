@@ -1,0 +1,10 @@
+Criar um Keyspace:
+
+CREATE KEYSPACE mykeyspace WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+
+Eliminar um keyspace:
+
+DROP KEYSPACE IF EXISTS mykeyspace;
+
+Nota -> o parametro IF EXISTS é opcional.
+

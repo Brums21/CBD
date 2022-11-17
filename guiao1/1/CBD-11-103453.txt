@@ -1,0 +1,39 @@
+SET chave "string_chave"
+get chave
+help get
+fluush db
+flushdb
+get chave
+set chave "valor string qualquer"
+append chave " v1"
+get chave
+getrange chave 0 10
+incr chave
+set inteiro 0
+incr inteiro
+get inteiro
+decr inteiro
+get inteiro
+exists chave
+exists chave1
+exists inteiro
+keys ""
+keys
+keys *
+rename chave frase
+get frase
+get chave
+type chave
+type frase
+type inteiro
+incr inteiro
+type inteiro
+ttl frase
+expire frase 10
+ttl frase
+persist frase
+ttl frase
+exists fras
+exists frase
+tlr fraseex
+ttl fraseex

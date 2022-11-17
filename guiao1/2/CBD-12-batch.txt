@@ -1,0 +1,14 @@
+set chave "valor chave"
+get chave
+set frase "engenharia informática"
+get frase
+append frase " é um curso da UA"
+exists frase
+exists naoexiste
+keys *
+type frase
+type naoexiste
+set inteiro 7
+incr inteiro
+get inteiro
+type inteiro
