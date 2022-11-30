@@ -1,4 +1,3 @@
-//Acabar isto
 cqlsh> CREATE KEYSPACE myKeySpace WITH replication = {'class' : 'SimpleStrategy', 'replication_factor' : 3} ;
 
 Warnings :
